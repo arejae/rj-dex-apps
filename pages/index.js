@@ -173,6 +173,7 @@ export default function Home() {
    * constant
    */
   const _addLiquidity = async () => {
+    console.log("Button _addLiquidity click:");
     try {
       // Convert the ether amount entered by the user to Bignumber
       const addEtherWei = utils.parseEther(addEther.toString());

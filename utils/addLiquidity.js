@@ -19,12 +19,15 @@ export const addLiquidity = async (
   addEtherAmountWei
 ) => {
   try {
+    console.log("addLiquidity start..");
     // create a new instance of the token contract
     const tokenContract = new Contract(
       TOKEN_CONTRACT_ADDRESS,
       TOKEN_CONTRACT_ABI,
       signer
     );
+
+    console.log("tokenContract:"+tokenContract);
     // create a new instance of the exchange contract
     const exchangeContract = new Contract(
       EXCHANGE_CONTRACT_ADDRESS,
@@ -43,6 +46,7 @@ export const addLiquidity = async (
       value: addEtherAmountWei,
     });
     await tx.wait();
+    console.log("addLiquidity done..");
   } catch (err) {
     console.error(err);
   }
