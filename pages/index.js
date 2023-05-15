@@ -298,7 +298,9 @@ export default function Home() {
     //   window.alert("Change the network to Goerli");
     //   throw new Error("Change network to Goerli");
     // }
-    if (chainId !== 5 && chainId!==11155111) {
+    console.log("chainId:"+chainId);
+    //31337 - Hardhat localhost
+    if (chainId !== 5 && chainId !== 11155111 && chainId !== 31337) {
       //window.alert("Change the network to Goerli Or Sepolia");
       //throw new Error("Change network to Goerli or Sepolia");
       console.log("Change the network to Goerli Or Sepolia");
@@ -494,7 +496,7 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs Exchange!</h1>
+          <h1 className={styles.title}>Welcome to RJ Crypto Devs Exchange!</h1>
           <div className={styles.description}>
             Exchange Ethereum &#60;&#62; Crypto Dev Tokens
           </div>
@@ -524,7 +526,7 @@ export default function Home() {
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
+        Made with &#10084; by Crypto Devs@RJWorld
       </footer>
     </div>
   );
